@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopEase</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+<nav>
+
+    <div class="logo">
+        ShopEase
+    </div>
+
+    <div class="search-box">
+        <input
+            type="text"
+            id="search"
+            placeholder="Search products">
+    </div>
+
+    <div class="nav-right">
+
+        <button id="themeBtn">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <button id="cartBtn" class="icon-btn">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cartCount">0</span>
+        </button>
+
+        <div id="guestMenu">
+
+            <button id="loginBtn">
+                Login
+            </button>
+
+        </div>
+
+        <div id="userMenu" class="hidden">
+
+            <span id="userName"></span>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<section class="hero">
+
+    <div>
+
+        <h1>Shop Smarter.</h1>
+
+        <p>
+            Everything you need in one place.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="filters">
+
+    <button class="filter active" data-category="all">
+        All
+    </button>
+
+    <button class="filter" data-category="men's clothing">
+        Men
+    </button>
+
+    <button class="filter" data-category="women's clothing">
+        Women
+    </button>
+
+    <button class="filter" data-category="electronics">
+        Electronics
+    </button>
+
+    <button class="filter" data-category="jewelery">
+        Jewellery
+    </button>
+
+</section>
+
+<main id="products" class="products"></main>
+
+<aside id="cart" class="cart">
+
+    <div class="cart-top">
+
+        <h2>Shopping Cart</h2>
+
+        <button id="closeCart">
+            &times;
+        </button>
+
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-bottom">
+
+        <h3>
+            Total:
+            $
+            <span id="total">0.00</span>
+        </h3>
+
+        <button id="checkout">
+            Checkout
+        </button>
+
+    </div>
+
+</aside>
+
+<div id="productModal" class="modal">
+
+    <div class="modal-box">
+
+        <button id="closeProduct">
+            &times;
+        </button>
+
+        <img id="modalImg">
+
+        <h2 id="modalTitle"></h2>
+
+        <h3 id="modalPrice"></h3>
+
+        <p id="modalDesc"></p>
+
+    </div>
+
+</div>
+
+<div id="authModal" class="modal">
+
+    <div class="modal-box auth-box">
+
+        <button id="closeAuth">
+            &times;
+        </button>
+
+        <h2 id="authTitle">
+            Login
+        </h2>
+
+        <input
+            type="text"
+            id="nameField"
+            placeholder="Your name">
+
+        <input
+            type="email"
+            id="emailField"
+            placeholder="Email">
+
+        <input
+            type="password"
+            id="passwordField"
+            placeholder="Password">
+
+        <button id="authSubmit">
+            Continue
+        </button>
+
+        <p>
+
+            <span id="switchText">
+                Don't have an account?
+            </span>
+
+            <a href="#" id="switchAuth">
+                Register
+            </a>
+
+        </p>
+
+    </div>
+
+</div>
+
+<div class="loader" id="loader">
+    Loading...
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
