@@ -35,7 +35,7 @@ The website uses the Fake Store API to display products and includes features li
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/Sumedh1007C/ShopEase-Ecommerce/tree/main
+git clone git clone https://github.com/Sumedh1007C/ShopEase-Ecommerce.git
 ```
 
 2. Open the project folder.
